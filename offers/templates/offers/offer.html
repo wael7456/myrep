@@ -1,0 +1,22 @@
+
+		<div class="row">
+			{% for of in offers %}
+			<div class="col-lg-4">
+				<img  src="https://static4.depositphotos.com/1027798/376/i/600/depositphotos_3765156-stock-photo-luxury-resort-in-turkey.jpg"     style="width:180px ;">
+				<div class="box-element product">
+					<h6><strong> {{   of.hotel_name  }} </strong></h6>
+					<p>  {{ of.localization  }}   </p>
+					<p> {{ of.stars_number  }}   </p>
+					<hr>
+					<button data-product="{{of.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart"> Reserver </button>
+					
+					<a class="btn btn-outline-success" href="#">View</a>
+					<h4 style="display: inline-block "> <strong>${{of.price}}</strong></h4>
+	
+				</div>
+			</div>
+			{% endfor %}
+	
+
+
+	
